@@ -1,4 +1,4 @@
-#vnc_screen
+#vnc_screen_shot
 Sometimes, I would like to save the VM's before doing operation
 to make sure VM was not affected with the operation.
 
