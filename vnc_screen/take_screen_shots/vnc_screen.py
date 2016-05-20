@@ -44,9 +44,10 @@ if __name__=="__main__":
   FILENAME = "{0:%Y-%m-%d_%H:%M:%S}".format(datetime.datetime.now()) + '.png'
   TODAY = str(datetime.date.today())
   PATH = os.path.join(CURRENT, 'screenshot')
-  PATH = os.path.join(PATH, TODAY)
+  PATH = os.path.join(PATH,TODAY)
 
+  print PATH
   #Create Directory
-  if not os.path.exists(PATH):
+  if not os.path.exists(PATH): 
     os.makedirs(PATH)
   TakeScreenShot(URL, FILENAME, PATH);
