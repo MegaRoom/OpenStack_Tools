@@ -11,5 +11,7 @@ This script automate that
 
 ##Requirement
 python 2.7
+
 firefox
+
 selenium 2.53.2 (python library)
