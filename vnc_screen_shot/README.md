@@ -17,17 +17,19 @@ This script automate that
 
 #How to use this script
 1. get urls by using 
-  ```./get_vnc_urls.sh```
+  ```
+   $ for uuid in `nova list --all- | grep keyword | awk '{print $2}'`; do nova get-vnc-console $uuid novnc | grep novnc | awk '{print $4}'; done
+  ```
 
-2. copy and paste url_list to 
-  ```cp ./get_urls/url_list.txt ./take_screen_shots/url_list.txt
+2. copy urls and paste them to ./take_creen_shot/url_list.txt
   
-3. take screenshot
-  ```./get_vnc_urls.sh```
+3. run script
+  ```
+  cd take_screen_shot/
+  ./get_vnc_urls.sh
+  ```
 
 #Next step
 I will improbe below items.
 
 1. use uuid on the file name of the screen shot
-
-2. automate everything (one command do getting url and taking screenshot)
